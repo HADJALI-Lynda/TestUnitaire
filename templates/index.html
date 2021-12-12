@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUDLFT Registration</title>
+    <style>
+        .button {
+        background-color: rgba(109, 108, 206, 0.521);
+        border: 2px solid black;
+        color: black;
+        border-color: #042baa;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+     </style>
+</head>
+<body>
+    <h1>Welcome to the GUDLFT Registration Portal!</h1>
+    Please enter your secretary email to continue:
+    <form action="showSummary" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id=""/>
+        <button type="submit">Enter</button>
+    </form>
+
+    {% if error %}
+    <p class=error><strong>Sorry:</strong> {{ error }}
+    {% endif %}
+    <form action="tab" method="get">
+        <input type="submit" class="button" value="Liste des clubs">
+    </form>
+        
+</body>
+</html>
